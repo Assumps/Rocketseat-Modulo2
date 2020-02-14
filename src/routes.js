@@ -1,7 +1,9 @@
 import { Router } from 'express';
 
+import Usercontroller from './app/controllers/UserController';
+
 const routes = new Router();
 
-routes.get('/', (req, res) => res.json({ message: 'Hello Omni' }));
+routes.post('/users', Usercontroller.store);
 
 export default routes;
